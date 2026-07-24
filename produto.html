@@ -52,7 +52,30 @@ Açaí Delas
 
 <h2 id="produtoPreco"></h2>
 
+<h3>Tamanho</h3>
 
+<label>
+<input type="radio" name="tamanho" value="12" checked>
+300ml - R$12,00
+</label>
+
+
+<label>
+<input type="radio" name="tamanho" value="18">
+500ml - R$18,00
+</label>
+
+
+<label>
+<input type="radio" name="tamanho" value="25">
+700ml - R$25,00
+</label>
+
+
+<label>
+<input type="radio" name="tamanho" value="35">
+1 Litro - R$35,00
+</label>
 
 <h3>Adicionais</h3>
 
@@ -82,20 +105,45 @@ Paçoca + R$2
 
 
 
-<h3>
-Total:
-R$ <span id="total"></span>
-</h3>
+ 
+<h3>Quantidade</h3>
 
+<div class="quantidade">
 
-
- <button onclick="adicionarCarrinho()">
-Adicionar ao Carrinho
+<button onclick="alterarQuantidade(-1)">
+- 
 </button>
 
-Pedir pelo WhatsApp
 
+<span id="quantidade">
+1
+</span>
+
+
+<button onclick="alterarQuantidade(1)">
++
 </button>
+
+</div>
+
+
+ <div class="botoes-produto">
+
+<button onclick="adicionarCarrinho()" class="btn-carrinho">
+🛒 Adicionar ao Carrinho
+</button>
+
+
+<button onclick="pedirWhatsApp()" class="btn-whatsapp">
+💬 Pedir pelo WhatsApp
+</button>
+
+</div>
+<div class="botoes-produto">
+
+
+
+</div>
 
 
 

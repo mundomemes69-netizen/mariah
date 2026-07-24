@@ -60,52 +60,63 @@
                  Açaí Delas
 
             </a>
+ 
 
             <nav>
 
-                <ul>
+<ul>
 
-                    <li><a href="inicio.html">Início</a></li>
+<li>
+<a href="#inicio">Início</a>
+</li>
 
-                    <li><a href="produtos.html">Produtos</a></li>
 
-                    <li><a href="cardapio.html">Cardápio</a></li>
+<li>
+<a href="#produtos">Produtos</a>
+</li>
 
-                    <li><a href="sobre.html">Sobre</a></li>
 
-                    <li><a href="contato.html">Contato</a></li>
+<li>
+<a href="#cardapio">Cardápio</a>
+</li>
 
-                </ul>
 
-            </nav>
+<li>
+<a href="#sobre">Sobre</a>
+</li>
 
-            <a href="#" class="btn-header">
 
-                Pedir Agora
+<li>
+<a href="#contato">Contato</a>
+</li>
 
-            </a>
+
+</ul>
+
+</nav>
+             <a href="https://wa.me/SEUNUMERO" class="btn-header" target="_blank">
+
+    Pedir Agora
+
+</a>
 
         </div>
 
-<div class="mobile-menu">
+ <div class="mobile-menu">
 
-    <a href="#">Início</a>
+<a href="#inicio">Início</a>
 
-    <a href="#">Produtos</a>
+<a href="#produtos">Produtos</a>
 
-    <a href="#">Cardápio</a>
+<a href="#cardapio">Cardápio</a>
 
-    <a href="#">Sobre</a>
+<a href="#sobre">Sobre</a>
 
-    <a href="#">Contato</a>
-
-    <a href="#" class="mobile-btn">
-
-        Pedir Agora
-
-    </a>
+<a href="#contato">Contato</a>
 
 </div>
+
+
     </header>
 
     <!-- ================= HERO ================= -->
@@ -183,358 +194,239 @@
 
     </section>
         <!-- ================= PRODUTOS EM DESTAQUE ================= -->
+<section class="featured-products">
 
-    <section class="featured-products">
+<div class="container">
 
-        <div class="container">
 
-            <div class="section-title">
+<div class="section-title">
 
-                <span>Mais Pedidos</span>
+<span>Mais Pedidos</span>
 
-                <h2>Escolha seu Açaí Favorito</h2>
+<h2>Escolha seu Açaí Favorito</h2>
 
-                <p>
-                    Preparados com ingredientes selecionados e muito sabor.
-                </p>
+<p>
+Preparados com ingredientes selecionados e muito sabor.
+</p>
 
-            </div>
+</div>
 
-            <div class="products-grid">
 
-                <!-- Produto 1 -->
+<div class="products-grid">
+     <!-- Produto 1 -->
 
-                 <article class="product-card" onclick="abrirProduto('açai com nutela')"></article>
+<article class="product-card" onclick="abrirProduto('açai com morango')">
 
-                    <div class="product-image">
+    <div class="product-image">
 
-                        <!-- Substitua pela imagem -->
-                        <img src="açai 1.jpg" alt=" açai com nutela">
+        <img src="açai1.jpg" alt="Açaí com morango">
 
-                    </div>
+    </div>
 
-                    <div class="product-info">
 
-                        <h3>açai com nutela</h3>
+    <div class="product-info">
 
-                        <p>
-                            Açaí cremoso com banana, leite condensado e granola.
-                        </p>
+        <h3>Açaí com morango</h3>
 
-                        <div class="product-footer">
+        <p>
+            Açaí cremoso com banana, leite condensado e granola.
+        </p>
 
-                            <span>R$ 24,90</span>
 
-                            <a href="#" onclick="event.stopPropagation()">Pedir</a>
+        <div class="product-footer">
 
-                        </div>
+            <span>R$ 24,90</span>
 
-                    </div>
-
-                </article>
-
-                <!-- Produto 2 -->
-
-                <article class="product-card" onclick="abrirProduto('açai com paçoca')"></article>
-
-                    <div class="product-image">
-
-                        <img src="acai 2.pjn.jpg" alt="açai com paçoca">
-
-                      </div> 
-                
-  
-                    <div class="product-info">
-                    
-                     
-            
-                        <h3>açai com paçoca</h3>
-
-                        <p>
-                            Morango, Nutella, leite em pó e paçoca.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <span>R$ 31,90</span>
-
-                             <a href="#" onclick="event.stopPropagation()">Pedir</a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- Produto 3 -->
-
-                 <article class="product-card" onclick="abrirProduto('açai kinder bueno')"></article>
-
-                    <div class="product-image">
-
-                        <img src="açai 3.pnj.jpg" alt=" açai kinder bueno">
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>açai kinder bueno</h3>
-
-                        <p>
-                            Creme de ninho, kiwi, uva, morango e leite condensado.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <span>R$ 34,90</span>
-
-                             <a href="#" onclick="event.stopPropagation()">Pedir</a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- Produto 4 -->
-
-                 <article class="product-card" onclick="abrirProduto('tradicional')"></article>
-
-                    <div class="product-image">
-
-                        <img src="açai 4.pnj.jpg" alt="Barca de Açaí">
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>Barca de Açaí</h3>
-
-                        <p>
-                            Ideal para compartilhar com frutas e adicionais premium.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <span>R$ 59,90</span>
-
-                             <a href="#" onclick="event.stopPropagation()">Pedir</a>
-
-                        </div>
-
-                    </div>
- 
-                    <!-- Produto 5 -->
- 
-                 <article class="product-card" onclick="abrirProduto('açai com nutella' )"></article>
-
-                    <div class="product-image">
-
-                        <img src="açai 5.pnj.jpg" alt="açai com nutella ">
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>açai com nutella</h3>
-
-                        <p>
-                            Ideal para compartilhar com frutas e adicionais premium.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <span>R$ 59,90</span>
-
-                             <a href="#" onclick="event.stopPropagation()">Pedir</a>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Produto 6 -->
-                 <article class="product-card" onclick="abrirProduto('açai com morango')"></article>
-
-                    <div class="product-image">
-
-                        <img src="açai 6.pnj.jpg" alt="açai com morango">
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>açai com morango</h3>
-
-                        <p>
-                            Ideal para compartilhar com frutas e adicionais premium.
-                        </p>
-
-                        <div class="product-footer">
-
-                            <span>R$ 59,90</span>
-
-                             <a href="#" onclick="event.stopPropagation()">Pedir</a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('açai com morango');">
+                Pedir
+            </a>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- ================= MONTE SEU AÇAÍ ================= -->
+</article>
 
-    <section class="build-acai">
 
-        <div class="container">
 
-            <div class="section-title">
+<!-- Produto 2 -->
 
-                <span>Personalize</span>
+<article class="product-card" onclick="abrirProduto('açai com paçoca')">
 
-                <h2>Monte do Seu Jeito</h2>
+    <div class="product-image">
 
-                <p>
-                    Escolha o tamanho, frutas, cremes e coberturas para criar o açaí perfeito.
-                </p>
+        <img src="acai 2.pjn.jpg" alt="açai com paçoca">
 
-            </div>
+    </div>
 
-            <div class="build-grid">
 
-                <div class="build-box">
+    <div class="product-info">
 
-                    <i class="fa-solid fa-cup-straw"></i>
+        <h3>açai com paçoca</h3>
 
-                    <h3>Tamanhos</h3>
+        <p>
+            Morango, Nutella, leite em pó e paçoca.
+        </p>
 
-                    <p>300ml • 500ml • 700ml • 1 Litro</p>
 
-                </div>
+        <div class="product-footer">
 
-                <div class="build-box">
+            <span>R$ 31,90</span>
 
-                    <i class="fa-solid fa-apple-whole"></i>
-
-                    <h3>Frutas</h3>
-
-                    <p>Morango, Banana, Kiwi, Uva, Manga e muito mais.</p>
-
-                </div>
-
-                <div class="build-box">
-
-                    <i class="fa-solid fa-cookie-bite"></i>
-
-                    <h3>Complementos</h3>
-
-                    <p>Granola, Paçoca, Confetes, Oreo, Castanhas...</p>
-
-                </div>
-
-                <div class="build-box">
-
-                    <i class="fa-solid fa-ice-cream"></i>
-
-                    <h3>Cremes</h3>
-
-                    <p>Nutella, Ninho, Ovomaltine, Doce de Leite e outros.</p>
-
-                </div>
-
-            </div>
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('açai com paçoca');">
+                Pedir
+            </a>
 
         </div>
 
-    </section>
-        <!-- ========================================= -->
-    <!-- SOBRE A AÇAÍ DELAS -->
-    <!-- ========================================= -->
+    </div>
 
-    <section class="about" id="sobre">
+</article>
 
-        <div class="container about-container">
 
-            <div class="about-image">
 
-                <!--
-                    FOTO DA LOJA OU DO AÇAÍ
+<!-- Produto 3 -->
 
-                    Troque depois por:
+<article class="product-card" onclick="abrirProduto('kinder')">
 
-                    assets/images/sobre.jpg
-                -->
+    <div class="product-image">
 
-                <img src="assets/images/sobre.jpg" alt="Açaí Delas">
+        <img src="açai3.pnj.jpg" alt="Açaí Kinder Bueno">
 
-            </div>
+    </div>
 
-            <div class="about-content">
 
-                <span class="section-tag">
-                    Nossa História
-                </span>
+    <div class="product-info">
 
-                <h2>
-                    Muito mais que um açaí.
-                    Uma experiência deliciosa.
-                </h2>
+        <h3>Açaí Kinder Bueno</h3>
 
-                <p>
+        <p>
+            Creme de ninho, Kinder Bueno e coberturas especiais.
+        </p>
 
-                    Na Açaí Delas acreditamos que cada copo deve proporcionar um
-                    momento especial.
 
-                    Trabalhamos com ingredientes selecionados, frutas frescas e
-                    acompanhamentos premium para entregar sempre o melhor sabor.
+        <div class="product-footer">
 
-                </p>
+            <span>R$ 34,90</span>
 
-                <p>
-
-                    Nosso compromisso é oferecer qualidade, rapidez no atendimento
-                    e uma experiência inesquecível para nossos clientes.
-
-                </p>
-
-                <div class="about-info">
-
-                    <div class="info-box">
-
-                        <h3>100%</h3>
-
-                        <span>Ingredientes Selecionados</span>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <h3>+5 anos</h3>
-
-                        <span>de Experiência</span>
-
-                    </div>
-
-                    <div class="info-box">
-
-                        <h3>★★★★★</h3>
-
-                        <span>Clientes Satisfeitos</span>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('kinder');">
+                Pedir
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</article>
+
+
+
+<!-- Produto 4 -->
+
+<article class="product-card" onclick="abrirProduto('barca')">
+
+    <div class="product-image">
+
+        <img src="açai4.pnj.jpg" alt="Barca de Açaí">
+
+    </div>
+
+
+    <div class="product-info">
+
+        <h3>Barca de Açaí</h3>
+
+        <p>
+            Ideal para compartilhar com frutas e adicionais premium.
+        </p>
+
+
+        <div class="product-footer">
+
+            <span>R$ 59,90</span>
+
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('barca');">
+                Pedir
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- Produto 5 -->
+
+<article class="product-card" onclick="abrirProduto('garrafa de açai com nutella')">
+
+    <div class="product-image">
+
+        <img src="açai 5.pnj.jpg" alt="garrafa açai com nutela">
+
+    </div>
+
+
+    <div class="product-info">
+
+        <h3>garrafa açai com nutella</h3>
+
+        <p>
+            Combinação especial de frutas e cremes.
+        </p>
+
+
+        <div class="product-footer">
+
+            <span>R$ 39,90</span>
+
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('garrafa de açai com nutela');">
+                Pedir
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- Produto 6 -->
+
+<article class="product-card" onclick="abrirProduto('açai com morango')">
+
+    <div class="product-image">
+
+        <img src="açai6.pnj.jpg" alt="Açaí com Morango">
+
+    </div>
+
+
+    <div class="product-info">
+
+        <h3>Açaí com Morango</h3>
+
+        <p>
+            Açaí cremoso com morangos frescos e adicionais.
+        </p>
+
+
+        <div class="product-footer">
+
+            <span>R$ 29,90</span>
+
+            <a href="#" onclick="event.stopPropagation(); abrirProduto('açai com morango')">
+                Pedir
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
 
 
 
@@ -631,27 +523,27 @@
             <div class="gallery-grid">
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria1.jpg" alt="">
+                    <img src="açai 1.jpg" alt="">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria2.jpg" alt="">
+                    <img src="acai 2.pjn.jpg" alt="">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria3.jpg" alt="">
+                    <img src="açai 3.pnj.jpg" alt="">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria4.jpg" alt="">
+                    <img src="açai 4.pnj.jpg" alt="">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria5.jpg" alt="">
+                    <img src="açai 5.pnj.jpg" alt="">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/galeria6.jpg" alt="">
+                    <img src="açai 6.pnj.jpg" alt="">
                 </div>
 
             </div>
@@ -889,9 +781,14 @@ target="_blank">
 
 
     
-<script src="script.js"></script> 
+ <a href="#" class="back-top">
 
-<a href="https://wa.me/SEUNUMERO" 
+<i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+
+<a href="https://wa.me/551177695185" 
 class="whatsapp-float"
 target="_blank">
 
@@ -899,6 +796,10 @@ target="_blank">
 
 </a>
 
-</body> 
+
+<script src="script.js"></script>
+
+
+</body>
 
 </html>

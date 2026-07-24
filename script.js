@@ -409,15 +409,53 @@ descricao:"Ideal para compartilhar."
 }
 
 };
+// ======================================
+// PRODUTOS DA LOJA
+// ======================================
+
+const produtos = {
+
+tradicional:{
+nome:"Açaí Tradicional",
+imagem:"assets/images/produto1.jpg",
+preco:24.90,
+descricao:"Açaí cremoso com banana, leite condensado e granola."
+},
 
 
-function abrirProduto(id){
+premium:{
+nome:"Açaí Premium",
+imagem:"assets/images/produto2.jpg",
+preco:31.90,
+descricao:"Morango, Nutella, leite em pó e paçoca."
+},
+
+
+especial:{
+nome:"Copo Especial",
+imagem:"assets/images/produto3.jpg",
+preco:34.90,
+descricao:"Creme de ninho, kiwi, uva e morango."
+},
+
+
+barca:{
+nome:"Barca de Açaí",
+imagem:"assets/images/produto4.jpg",
+preco:59.90,
+descricao:"Ideal para compartilhar com frutas e adicionais premium."
+}
+
+};
+
+ function abrirProduto(id){
 
 localStorage.setItem("produtoSelecionado", id);
 
 window.location.href="produto.html";
 
 }
+
 // ===============================
 // PÁGINA DO PRODUTO
 // ===============================
@@ -453,21 +491,75 @@ total.toFixed(2);
 let adicionais = document.querySelectorAll("input[type='checkbox']");
 
 
+ // ======================================
+// CALCULO DO PRODUTO
+// ======================================
+
+
+let tamanhoSelecionado = 12;
+
+
+
+let tamanhos = document.querySelectorAll(
+"input[name='tamanho']"
+);
+
+
+
+tamanhos.forEach(tamanho=>{
+
+
+tamanho.addEventListener("change",()=>{
+
+
+tamanhoSelecionado = Number(tamanho.value);
+
+
+atualizarTotal();
+
+
+});
+
+
+});
+
+
+
+let adicionais = document.querySelectorAll(
+"input[type='checkbox']"
+);
+
+
+
 adicionais.forEach(item=>{
 
 
 item.addEventListener("change",()=>{
 
 
-let valor = produto.preco;
+atualizarTotal();
 
 
-adicionais.forEach(check=>{
+});
 
 
-if(check.checked){
+});
 
-valor += Number(check.dataset.preco);
+
+
+function atualizarTotal(){
+
+
+ let total = tamanhoSelecionado * quantidadeProduto;
+
+
+
+adicionais.forEach(item=>{
+
+
+if(item.checked){
+
+total += Number(item.dataset.preco);
 
 }
 
@@ -475,21 +567,26 @@ valor += Number(check.dataset.preco);
 });
 
 
-document.getElementById("total").innerHTML =
-valor.toFixed(2);
+
+let campoTotal = document.getElementById("total");
 
 
-});
+if(campoTotal){
+
+campoTotal.innerHTML =
+total.toFixed(2);
+
+}
 
 
-});
-
+}
 
 }
 
 
 
-function pedirWhatsApp(){
+
+ function pedirWhatsApp(){
 
 
 let mensagem =
@@ -508,6 +605,8 @@ document.querySelectorAll("input[type='checkbox']:checked")
 mensagem += "- " + item.value + "\n";
 
 });
+
+
 
 
 mensagem += "\nTotal: R$ "
@@ -697,5 +796,117 @@ encodeURIComponent(mensagem)
 
 );
 
+
+}
+// ======================================
+// TAMANHOS DO AÇAÍ
+// ======================================
+
+
+let tamanhoSelecionado = 12;
+
+
+
+let tamanhos = document.querySelectorAll(
+"input[name='tamanho']"
+);
+
+
+
+tamanhos.forEach(tamanho=>{
+
+
+tamanho.addEventListener("change",()=>{
+
+
+tamanhoSelecionado = Number(tamanho.value);
+
+
+atualizarTotal();
+
+
+});
+
+
+});
+
+
+
+
+
+function atualizarTotal(){
+
+
+let total = tamanhoSelecionado;
+
+
+
+document.querySelectorAll(
+"input[type='checkbox']:checked"
+)
+.forEach(item=>{
+
+
+total += Number(item.dataset.preco);
+
+
+});
+
+
+
+let campoTotal = document.getElementById("total");
+
+
+if(campoTotal){
+
+campoTotal.innerHTML =
+total.toFixed(2);
+
+}
+
+
+}
+// ======================================
+// QUANTIDADE DO PRODUTO
+// ======================================
+
+
+let quantidadeProduto = 1;
+
+
+
+function alterarQuantidade(valor){
+
+
+quantidadeProduto += valor;
+
+
+
+if(quantidadeProduto < 1){
+
+quantidadeProduto = 1;
+
+}
+
+
+
+document.getElementById("quantidade").innerHTML =
+quantidadeProduto;
+
+
+
+atualizarTotal();
+
+
+}
+// ======================================
+// ABRIR PRODUTO
+// ======================================
+
+function abrirProduto(id){
+
+    localStorage.setItem("produtoSelecionado", id);
+
+    window.location.href = "produto.html";
 
 }
